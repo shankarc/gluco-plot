@@ -1,0 +1,15 @@
+
+{% block content %}
+<div class="jumbo">
+    <form method="POST" enctype="multipart/form-data" action="{{ url_for('upload') }}">
+        <p>
+        Upload a CSV file:
+        </p>
+        <input type="file" name="csv">
+        <div>
+        <input type="submit" value="Upload">
+        </div>
+    </form>
+   <a href="{{ url_for('home') }}">Return Home</a>
+</div>
+{% endblock %}

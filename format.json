@@ -1,0 +1,27 @@
+[
+    {
+        "mysgr":{
+            "comment_csvcol":"The columns in CSV to get the information we need",
+            "csvcol":{
+                "date":0,
+                "time":1,
+                "mgdl":3
+            },
+            "comment_datefmt":"The date format string in UNIX date time structure format to convert CSV date into epoch time",
+            "datefmt": "%b %d, %Y",
+            "comment_lines_to_skip": "The number of lines to skip before getting into data",
+            "lines_to_skip":1
+        }
+    },
+    {
+        "wavesense":{
+            "csvcol":{
+                "date":1,
+                "time":2,
+                "mgdl":3
+            },
+            "datefmt": "%m/%d/%y",
+            "lines_to_skip":15
+        }
+    }
+]

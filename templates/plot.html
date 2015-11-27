@@ -1,0 +1,7 @@
+{% extends "layout.html" %}
+
+{% block content %}
+       <!-- Tell Jinja that rendered SVG XML is safe -->
+        <h2> {{title}} </h2>
+        {{ line_chart.render()|safe }}
+{% endblock %}

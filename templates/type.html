@@ -1,0 +1,27 @@
+{% block content %}
+<div class="jumbo">
+    <form method="POST"  action="{{ url_for('plot') }}">
+        <p>
+        Select the file type and plot format to plot:
+        </p>
+    <div>
+    <input type="radio" name="filetype" value="wavesense" checked>Wave Sense<br>
+    <input type="radio" name="filetype" value="mysgr"> My Sugr<br>
+    <hr>
+    <input type="radio" name="plottype" value="line" checked> Line Chart<br>
+    <input type="radio" name="plottype" value="pie"> Pie Chart<br>
+    <input type="radio" name="plottype" value="box"> Box Plot<br>
+    <input type="radio" name="plottype" value="gauge"> Gauge Chart<br>
+        <hr>
+        <p>
+        Select if you want to Display or Save the plot into file
+        </p>
+        <input type="radio" name="render" value="plot" checked> Plot<br>
+        <input type="radio" name="render" value="file"> Save to file<br>
+        <hr>
+    </div>
+    <button type="submit">Plot</button>
+    </form>
+    <a href="{{ url_for('home') }}">Return Home</a>
+</div>
+{% endblock %}
