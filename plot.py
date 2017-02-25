@@ -99,7 +99,7 @@ class PlotGluco(object):
         line_chart.title = title
         line_chart.style = DarkSolarizedStyle
         line_chart.disable_xml_declaration = True
-        line_chart.x_labels = map(str, xaxis)
+        line_chart.x_labels = [map(str, xaxis)]
         line_chart.add('mg/dl', yaxis)
         if not file:
             return render_template('plot.html', title=title, line_chart=line_chart)
